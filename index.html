@@ -15,12 +15,13 @@
             font-size: 2.3em;
             text-align: center;
             border-width: 5em;
-            height: 1.1em;
+            width: 20em;
+            height: 1.13em;
             border-radius: 15px;
-            margin-top: 0.5em;
+            margin-top: -0.2em;
             margin-left: 0.5em;
             margin-right: 0.5em;
-            position: static;
+            position: fixed;
         }
         .nav-seporator {
             color: darkgray;
@@ -55,7 +56,7 @@
             position: relative;
             top: 13em;
         }
-        .html-box {
+        .home-box {
             background-color: white;
             color: black;
             text-align: center;
@@ -63,7 +64,8 @@
             top: 450px;
         }
         .box-title {
-            margin-top: 100px;
+            padding-top: 30px;
+            font-size: 25px;
         }
     </style>
 </head>
@@ -73,8 +75,7 @@
         <a href="#home" class="nav-button">Home</a>
         <a href="#about" class="nav-button">About</a>
         <a class="nav-seporator">     |    </a>
-        <a href="#html" class="nav-button">HTML</a>
-        <a href="#css" class="nav-button">CSS</a>
+        <a href="#html" class="nav-button">Websites</a>
         <a href="#javascript" class="nav-button">JavaScript</a>
         <a href="#github" class="nav-button">Github</a>
         <a href="#games" class="nav-button">Games</a>
@@ -83,8 +84,21 @@
     <h1 id="home">Welcome.</h1>
     <h2 id="home-sub">If you're a business, developer, or gamer,<br /> you're in the right place.</h2>
 
-    <div class="html-box">
-        <h1 class="box-title">HTML</h1>
+    <div id="not-main-title">
+
+        <div class="home-box">
+            <h1 class="box-title">Websites</h1>
+        </div>
+        <div class="home-box">
+            <h1 class="box-title">JavaScript</h1>
+        </div>
+        <div class="home-box">
+            <h1 class="box-title">Github</h1>
+        </div>
+        <div class="home-box">
+            <h1 class="box-title">Games</h1>
+        </div>
+
     </div>
 
 
@@ -93,8 +107,17 @@
     <script>
         $("#home").hide();
         $("#home-sub").hide();
+        $("#not-main-title").hide();
         $("#home").slideDown(1200);
-        $("#home-sub").slideDown(1200);
+        $("#home-sub").slideDown(1200, function() {
+            $("#not-main-title").slideDown(1);
+        });
+        setInterval(function myFunction() {
+            var navBarWidth = (outerWidth - 50) + "px";
+            $(".nav-bar").css("width", navBarWidth);
+        }, 0);
+        var navBarWidth = (outerWidth - 50) + "px";
+        $(".nav-bar").css("width", navBarWidth);
         
     </script>
 </body>
