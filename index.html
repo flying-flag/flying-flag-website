@@ -8,6 +8,7 @@
         body {
             background-color: black;
             font-family: sans-serif;
+            color: white;
         }
         .nav-bar {
             background-color: white;
@@ -19,6 +20,7 @@
             margin-top: 0.5em;
             margin-left: 0.5em;
             margin-right: 0.5em;
+            position: static;
         }
         .nav-seporator {
             color: darkgray;
@@ -53,6 +55,16 @@
             position: relative;
             top: 13em;
         }
+        .html-box {
+            background-color: white;
+            color: black;
+            text-align: center;
+            position: relative;
+            top: 450px;
+        }
+        .box-title {
+            margin-top: 100px;
+        }
     </style>
 </head>
 <body>
@@ -69,7 +81,11 @@
     </div>
 
     <h1 id="home">Welcome.</h1>
-    <h2 id="home-sub">If you're a business, developer, or gamer,<br/> you've came to the right place.</h2>
+    <h2 id="home-sub">If you're a business, developer, or gamer,<br /> you're in the right place.</h2>
+
+    <div class="html-box">
+        <h1 class="box-title">HTML</h1>
+    </div>
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
@@ -77,9 +93,9 @@
     <script>
         $("#home").hide();
         $("#home-sub").hide();
-        $("#home").slideDown(1200, function () {
-            $("#home-sub").slideDown(1000);
-        });
+        $("#home").slideDown(1200);
+        $("#home-sub").slideDown(1200);
+        
     </script>
 </body>
 </html>
