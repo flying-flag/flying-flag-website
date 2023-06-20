@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>flying flag</title>
+    <link rel="icon" type="image" href="https://img.icons8.com/?size=512&id=CcpNYf1FoA3v&format=png">
+    <style>
+        body {
+            background-color: black;
+            font-family: sans-serif;
+        }
+        .nav-bar {
+            background-color: white;
+            font-size: 2.3em;
+            text-align: center;
+            border-width: 5em;
+            width: 20em;
+            height: 1.13em;
+            border-radius: 15px;
+            margin-top: 0.45em;
+            margin-left: 0.5em;
+            margin-right: 0.5em;
+            position: fixed;
+            z-index: 2;
+        }
+
+        .nav-seporator {
+            color: darkgray;
+            font-size: 0.55em;
+            text-decoration: none;
+            padding: 8px;
+            position: relative;
+            top: -0.25em;
+        }
+
+        .nav-button {
+            color: black;
+            font-size: 0.55em;
+            text-decoration: none;
+            padding: 8px;
+            position: relative;
+            top: -0.25em;
+        }
+
+        .nav-button:hover {
+            background-color: rgb(230, 230, 230);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="nav-bar">
+        <a href="#home" class="nav-button">Home</a>
+        <a href="#about" class="nav-button">About Me</a>
+        <a class="nav-seporator">     |    </a>
+        <a href="#websites" class="nav-button">Websites</a>
+        <a href="#javascript" class="nav-button">JavaScript</a>
+        <a href="#games" class="nav-button">Games</a>
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+    <script>
+        setInterval(function myFunction() {
+            var navBarWidth = (outerWidth - 50) + "px";
+            $(".nav-bar").css("width", navBarWidth);
+        }, 0);
+        var navBarWidth = (outerWidth - 50) + "px";
+        $(".nav-bar").css("width", navBarWidth);</script>
+</body>
+</html>
